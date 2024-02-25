@@ -1,10 +1,9 @@
+/* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Actor&family=Candal&display=swap');
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* CSS Reset */
+/* Meyerweb CSS reset v2.0 | 20110126 License: none (public domain) */
+/* Reset styles */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,119 +13,221 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    display: block;
 }
 
-
-/* ------------------------GLOBAL STYLES--------------------- */
-:root{
-  --blue: #27668c;
-  --light-green: #bfb630;
-  --med-green: #565902;
-  --dark-green: #403c01;
-  --gray: #8d9586;
-  --dark-gray: #222;
-  --black: #000;
-  --white: #fff;
-  --heading-font: 'Candal', sans-serif;
-  --body-font: 'Actor', sans-serif;
-  font-size: 16px;
+/* Global Styles */
+:root {
+    --blue: #27668c;
+    --light-green: #bfb630;
+    --med-green: #565902;
+    --dark-green: #403c01;
+    --gray: #8d9586;
+    --dark-gray: #222;
+    --black: #000;
+    --white: #fff;
+    --heading-font: 'Candal', sans-serif;
+    --body-font: 'Actor', sans-serif;
+    font-size: 16px;
 }
 
-*{
-  line-height: 1.35;
-  font-family: var(--body-font);
-  color: var(--dark-gray);
-  box-sizing:  border-box;
+* {
+    line-height: 1.35;
+    font-family: var(--body-font);
+    color: var(--dark-gray);
+    box-sizing: border-box;
 }
 
-#skip{
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-}
- 
-#skip:focus{
-  position:static;
-  width:auto;
-  height:auto;
+/* Hidden skip link */
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-header, footer{
-  background-color: var(--dark-green);
-  color: var(--white);
+#skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
 }
 
-img{
-  display:  block;
+/* Header and Footer Styles */
+header, footer {
+    background-color: var(--dark-green);
+    color: var(--white);
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: var(--heading-font);
-  text-align: center;
+/* Image Styles */
+img {
+    display: block;
 }
 
-h1{
-  color: var(--white);
-  font-size: 1.5rem;
-  padding: 0.75rem 0;
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    text-align: center;
 }
 
-h2{
-  font-size: 1.25rem;
-  padding: 0.6rem 0;
-  white-space: nowrap;
-  margin: 0.5rem 1rem;
+h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 0.75rem 0;
 }
 
-h3{
-  font-size: 1.1rem;
+h2 {
+    font-size: 1.25rem;
+    padding: 0.6rem 0;
+    white-space: nowrap;
+    margin: 0.5rem 1rem;
 }
 
-.hidden{
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+h3 {
+    font-size: 1.1rem;
 }
 
-nav ul{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 
+/* Navigation Styles */
+nav ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+a {
+    color: var(--dark-gray);
+}
+
+nav a {
+    font-family: var(--heading-font);
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.active {
+    text-decoration: underline var(--light-green);
+    text-decoration-thickness: 3px;
+}
+
+/* Paragraph Styles */
+p {
+    margin: 0 auto;
+}
+
+#homeMain p {
+    padding: 1rem;
+}
+
+/* Section Styles */
+#aboutPlants {
+    background-color: var(--blue);
+}
+
+#contactUs {
+    background-color: var(--med-green);
+}
+
+#aboutPlants p,
+#aboutPlants h3,
+#contactUs p,
+#contactUs h3 {
+    color: var(--white);
+    padding: 1rem;
+}
+
+/* Footer Styles */
+footer section {
+    max-width: 275px;
+    margin: 1rem auto 0 auto;
+}
+
+footer h2:first-of-type {
+    padding-top: 1em;
+}
+
+footer h2,
+footer a,
+footer span {
+    color: var(--white);
+    display: block;
+}
+
+footer a {
+    padding: 1rem 0;
+}
+
+address a:first-of-type {
+    margin-top: 1rem;
+}
+
+footer address {
+    font-family: var(--body-font);
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+/* Social Media Styles */
+#socialMedia {
+    max-width: 340px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem auto 0 auto;
+    padding-bottom: 1rem;
+}
+
+#socialMedia h2 {
+    grid-column: 1/-1;
+    margin: 1rem 0 0 0;
+}
+
+#socialMedia img {
+    width: 50px;
+    margin: 0 auto;
+    padding: 0.25rem;
+}
+
+/* Mobile Styles */
+header img {
+    width: 90px;
+    margin: 0 auto;
+}
+
+#hero {
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto;
+}
+
+#homeMain span {
+    display: block;
+}
+
+#aboutPlants,
+#contactUs {
+    margin-bottom: 1rem;
+}
+
+#aboutPlants img,
+#contactUs img {
+    width: 60%;
+    max-width: 300px;
+    margin
